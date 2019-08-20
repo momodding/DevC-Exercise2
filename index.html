@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Exercise 2</title>
-</head>
-<body>
+  </head>
+  <body>
     <center>
-        <h1>Kalkulator</h1>
+      <h1>Kalkulator</h1>
     </center>
-</body>
+    <form>
+      <label for="">Nilai 1: </label>
+      <input type="text" name="value_1" id="" /><br />
+      <label for="">Nilai 2: </label>
+      <input type="text" name="value_2" id="" /><br />
+      <button type="button" onclick="hitung()">Hitung</button>
+    </form>
+    <input type="text" name="hasil" id="" />
+    <script>
+      function hitung() {
+        var value1 = document.getElementsByName("value_1")[0].value;
+        var value2 = document.getElementsByName("value_2")[0].value;
+
+        var hasil = parseInt(value1) + parseInt(value2);
+
+        document.getElementsByName("hasil")[0].value = hasil;
+      }
+    </script>
+  </body>
 </html>
