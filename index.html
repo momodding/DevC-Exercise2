@@ -89,6 +89,13 @@
                         >
                           %
                         </button>
+                        <button
+                          type="button"
+                          class="btn btn-danger"
+                          onclick="hitung('clear')"
+                        >
+                          C
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -120,6 +127,11 @@
         }
         if (params === "%") {
           var hasil = parseFloat(value1) % parseFloat(value2);
+        }
+        if (params === "clear") {
+          value_1 = "";
+          value_2 = "";
+          var hasil = "";
         }
 
         document.getElementsByName("hasil")[0].value = hasil;
